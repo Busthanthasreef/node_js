@@ -1,0 +1,304 @@
+/* === ORIGINAL CSS — UNCHANGED === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    font-size: 1.3em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    padding: 40px;
+}
+
+.section {
+    margin-bottom: 40px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    font-size: 2em;
+    color: #2d3748;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    display: flex;
+    align-items: center;
+}
+
+.section-number {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.subsection {
+    margin: 20px 0;
+}
+
+.subsection-title {
+    font-size: 1.5em;
+    color: #4a5568;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    border-left: 4px solid #667eea;
+}
+
+.topic-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.topic-list li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.topic-list li:before {
+    content: '▸';
+    position: absolute;
+    left: 15px;
+    color: #667eea;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.topic-list li:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(10px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.3);
+}
+
+.topic-list li:hover:before {
+    color: white;
+}
+
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.1em;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-left: 5px solid #f39c12;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-box strong {
+    color: #d35400;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+}
+
+/* ========================================================= */
+/* === DROPDOWN CONTENT STYLES (ADDED BY CHATGPT) — SMALL === */
+/* ========================================================= */
+
+.dropdown-box {
+    background: #ffffff;
+    margin: 5px 0 15px 40px;
+    padding: 15px;
+    border-left: 4px solid #667eea;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+    animation: dropdownOpen 0.25s ease;
+}
+
+@keyframes dropdownOpen {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.drop-inner {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.chatgpt-btn {
+    padding: 7px 14px;
+    background: #2d3748;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.8em;
+
+}
+
+.chatgpt-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatgpt-logo {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.chatgpt-btn:hover .chatgpt-logo {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+.ai-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.chatgpt-btn,
+.gemini-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.ai-logo {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.chatgpt-btn:hover .ai-logo,
+.gemini-btn:hover .ai-logo {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
+
+.gemini-icon {
+  font-size: 32px;
+  font-weight: bold;
+  color: #4285f4; /* Google Gemini Blue */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.gemini-btn:hover .gemini-icon {
+  transform: scale(1.2);
+  opacity: 0.85;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-text {
+  max-width: 75%;
+}
+
+
+
+
