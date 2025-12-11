@@ -3288,11 +3288,8 @@ ${content.malayalam}`;
     });
   });
 });
-// // ChatGPT button logic (FIXED)
-// box.querySelector(".chatgpt-btn").addEventListener("click", () => {
-//   const chatGPTUrl = "https://chatgpt.com/";
-//   window.open(chatGPTUrl, "_blank");
-// });
+
+
 
 
 
